@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 import React, { Component } from 'react';
 
 export default class AddTask extends Component {
@@ -33,16 +31,17 @@ export default class AddTask extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text"
+            <form
+                id="todo__form"
+                className="todo-app__form"
+                onSubmit={this.handleSubmit}>
+                <input
+                    className="todo-app__input"
+                    type="text"
                     name="task"
                     placeholder="whats your next task?"
                     onChange={this.handleChange}
                     value={this.state.content} />
-                <Button
-                    text={'+ Add a new task'}
-                    type={'submit'}
-                />
             </form>
         );
     }

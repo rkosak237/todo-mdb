@@ -60,21 +60,23 @@ export default class App extends Component {
         <article className="todo-app__container">
           <h1 className="todo-app__title">Hey, Good Evening!</h1>
             <TextMessage
-            tasks={tasks}/>
+            message={tasks}/>
           <section>
             <AddTask
               addTask={this.addTask}
               listOfTasks={tasks.length}
             />
-            <Button
-              text={'- Remove last task'}
-              event={this.removeLast}
-              className={'btn'}/>
+            <div className="todo-app__btn-container">
+              <Button
+                text={'- Remove last task'}
+                event={this.removeLast}
+                />
 
-            <Button
-              text={'Clear all'}
-              event={this.clearList}
-              className={'btn'} />
+              <Button
+                text={'Clear all'}
+                event={this.clearList}
+                />
+            </div>
           </section>
 
           <List
@@ -82,6 +84,12 @@ export default class App extends Component {
             event={this.removeTask}
           />
 
+          <Button
+            styling={"btn btn--add"}
+            form={'todo__form'}
+            text={'+ Add task'}
+            type={'submit'}
+          />
         </article>
       </div>
     );

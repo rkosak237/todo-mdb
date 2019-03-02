@@ -4,9 +4,9 @@ const initialData = {
     default: `There are no tasks! Add something`,
 }
 
-const TextMessage = ({ tasks }) => (
-    <p className="todo-app__text"> {tasks.length ?
-    `You have ${tasks.length} tasks to complete`
+const TextMessage = ({ message }) => (
+    <p className="todo-app__text"> {message.length ?
+        `You have ${message.length} tasks to complete`
     : initialData.default}
     </p>
 

@@ -7,12 +7,17 @@ const initialData = {
 }
 
 export default ({
-    classname = initialData.btnClass,
+    styling = initialData.btnClass,
     text = initialData.text,
     type = initialData.type,
-    event
+    event,
+    form
 }) => (
-        <button type={type} onClick={event} className={classname}>
+        <button
+        type={type}
+        onClick={event}
+        className={styling}
+        form={form}>
             {text}
         </button>
     );
