@@ -1,9 +1,86 @@
-html, body {
+@import './components/base/functions';
+@import './components//base//media-queries';
+@import './components/base/base';
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
 
-* {
-    box-sizing: border-box;
+html {
+    font-size: 62.5%; // background: themeColor(background-color);
+    font-family: 'Source Sans Pro', sans-serif; // color: themeColor(font-color);
+}
+
+body {
+    font-size: 1.5rem;
+    color: #2C3A47;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+.todo-app {
+    margin: 2rem 1rem;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__title {
+        font-size: 5rem;
+        margin: 0;
+    }
+    &__text {
+        color: lighter(#2C3A47, 10%);
+        font-weight: bold;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+    }
+    &__list-element {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 1.5rem;
+        box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.20);
+        padding: 1rem;
+        margin: 1rem;
+        width: 100%;
+    }
+}
+
+.list__element-close {
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.btn {
+    background: #3B3B98;
+    cursor: pointer;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #fff;
+    border: none;
+    border-radius: 3rem;
+    transition: .4s ease-in-out;
+    &:hover {
+        background: lighten(#3B3B98, 10%);
+    }
+    &:focus {
+        background: darken(#3B3B98, 10%);
+    }
 }

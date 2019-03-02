@@ -1,16 +1,18 @@
 import * as React from "react";
 
-const exampleData = {
+const initialData = {
     btnClass: 'btn',
     text: 'Pass text to props',
+    type: 'button'
 }
 
 export default ({
-    classname = exampleData.btnClass,
-    text = exampleData.text,
+    classname = initialData.btnClass,
+    text = initialData.text,
+    type = initialData.type,
     event
 }) => (
-        <button onClick={event} className={classname}>
+        <button type={type} onClick={event} className={classname}>
             {text}
         </button>
     );

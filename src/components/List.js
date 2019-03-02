@@ -3,16 +3,18 @@ import SingleTask from './SingleTask';
 
 
 export default ({
-    tasks
+    tasks,
+    event
 }) => (
-    <section>
-        <ul>
-            {
-            tasks.map((item, index) =>
-                <SingleTask
+    <ul className="todo-app__list">
+        {
+        tasks.map((item, index) =>
+            <SingleTask
                 index={index}
-                item={item}/>)
-            }
-        </ul>
-    </section>
+                key={item}
+                item={item}
+                removeItem={event}
+            />)
+        }
+    </ul>
 );

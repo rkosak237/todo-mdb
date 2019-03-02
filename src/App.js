@@ -3,6 +3,7 @@ import AddTask from './components/AddTask';
 import './styles/styles.scss';
 import List from './components/List';
 import Button from './components/Button';
+import TextMessage from './components/TextMessage';
 
 export default class App extends Component {
   constructor(props) {
@@ -33,6 +34,15 @@ export default class App extends Component {
     })
   }
 
+  removeTask = (taskToRemove) => {
+    this.setState((prevState) => ({
+      tasks: prevState.tasks.filter(task => {
+        return taskToRemove !== task;
+      })
+    }))
+  }
+
+
   handleChange = (e) => {
     this.setState({
       content: e.target.value
@@ -43,11 +53,12 @@ export default class App extends Component {
   render() {
     const { tasks } = this.state;
     return (
-      <div>
-        <article>
-          <h1>Hey, Good Evening!</h1>
+      <div className="todo-app">
+        <article className="todo-app__container">
+          <h1 className="todo-app__title">Hey, Good Evening!</h1>
+            <TextMessage
+            tasks={tasks}/>
           <section>
-            <p>You have {tasks.length} tasks to complete</p>
             <AddTask
             addTask={this.addTask}/>
             <Button
@@ -62,7 +73,8 @@ export default class App extends Component {
           </section>
 
           <List
-          tasks={tasks}
+            tasks={tasks}
+            event={this.removeTask}
           />
 
         </article>

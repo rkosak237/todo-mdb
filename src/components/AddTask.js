@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 import React, { Component } from 'react';
 
 export default class AddTask extends Component {
@@ -37,7 +39,10 @@ export default class AddTask extends Component {
                     placeholder="whats your next task?"
                     onChange={this.handleChange}
                     value={this.state.content} />
-                <button type="submit"> + Add a new task</button>
+                <Button
+                    text={'+ Add a new task'}
+                    type={'submit'}
+                />
             </form>
         );
     }
