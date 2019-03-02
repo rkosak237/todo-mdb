@@ -11,7 +11,7 @@ export default ({
         tasks.map((item, index) =>
             <SingleTask
                 index={index}
-                key={item}
+                key={item.id}
                 item={item}
                 removeItem={event}
             />)

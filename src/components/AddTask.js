@@ -14,7 +14,7 @@ export default class AddTask extends Component {
         const { content } = this.state;
         e.preventDefault();
         if(!content) {
-            this.props.addTask('Task number');
+            this.props.addTask(`Task number `);
         } else {
             this.props.addTask(this.state.content);
             this.setState({

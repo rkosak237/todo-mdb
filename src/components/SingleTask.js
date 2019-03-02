@@ -3,8 +3,8 @@ import React from 'react';
 export default ({ item, index, removeItem }) => (
     <li
     className="todo-app__list-element"
-    key={item}>
-        <p> {item} {`${index+1}#`}</p>
+    key={item.id}>
+        <p> {item.text} {`${index+1}#`}</p>
         <span
             onClick={(e) => {
                 removeItem(item)
