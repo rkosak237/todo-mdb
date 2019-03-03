@@ -1,0 +1,34 @@
+.btn {
+    background: $btn-background;
+    cursor: pointer;
+    padding: $m-size $l-size;
+    font-size: $font-s-size;
+    letter-spacing: 1px;
+    color: $btn-text;
+    border: none;
+    border-radius: $l-size;
+    transition: .4s ease-in-out;
+    width: 100%;
+    margin: 0 0 $s-size 0;
+    @media (min-width: $tablet) {
+        margin: 0;
+        width: $d-s-size;
+    }
+    &:hover {
+        background: $btn-hover-background;
+    }
+    &:focus {
+        background: $btn-focus-bg;
+    }
+}
+
+.btn--add {
+    margin: 0;
+    position: fixed;
+    bottom: $m-size;
+    right: $s-size;
+    width: unset;
+    @media (min-width: $tablet-landscape) {
+        right: 1rem;
+    }
+}

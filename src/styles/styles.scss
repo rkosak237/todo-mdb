@@ -1,43 +1,15 @@
-@import './components/base/functions';
 @import './components//base//media-queries';
+@import './components//base/settings';
 @import './components/base/base';
-* {
-    box-sizing: border-box;
-}
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-html {
-    // background: themeColor(background-color);
-    // color: themeColor(font-color);
-    font-size: 62.5%;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-body {
-    font-size: 1.5rem;
-    color: #2C3A47;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Playfair Display', serif;
-}
+@import './components/btn';
 
 .todo-app {
     display: flex;
     justify-content: center;
-    margin: 2rem 1rem;
+    margin: $m-size $s-size;
     @media (min-width: $tablet-landscape) {
-        margin: 4rem 1rem;
+        margin: $l-size $s-size;
     }
     &__container {
         display: flex;
@@ -47,16 +19,16 @@ h4 {
             width: 70%;
         }
         @media (min-width: $desktop-medium) {
-            width: 75rem;
+            width: $d-l-size;
         }
     }
     &__title {
-        font-size: 5rem;
+        font-size: $font-l-size;
         margin: 0;
     }
     &__text {
-        font-size: 2rem;
-        color: lighten(#2C3A47, 20%);
+        font-size: $font-m-size;
+        color: $th-light-font;
         font-weight: bold;
     }
     &__list {
@@ -68,17 +40,17 @@ h4 {
     &__list-element {
         display: flex;
         justify-content: space-between;
-        border-radius: 1.5rem;
-        box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.20);
-        padding: 1rem;
-        margin: 1rem;
+        border-radius: $s-size;
+        box-shadow: $th-shadow;
+        padding: $s-size;
+        margin: $s-size;
         width: 100%;
     }
     &__btn-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 2rem 0;
+        margin: 0 0 $s-size 0;
         @media (min-width: $tablet) {
             flex-direction: row;
             justify-content: space-evenly;
@@ -89,10 +61,10 @@ h4 {
         margin: 0 0 2rem 0;
     }
     &__input {
-        border: 1.5px solid #898686;
+        border: 1.5px solid $th-input-color;
         border-radius: 3rem;
-        padding: 1rem;
-        height: 4rem;
+        padding: $s-size;
+        height: $xl-size;
         width: 100%;
     }
 }
@@ -100,39 +72,4 @@ h4 {
 .list__element-close {
     cursor: pointer;
     align-self: flex-start;
-}
-
-.btn {
-    background: #3B3B98;
-    cursor: pointer;
-    padding: 2rem 3rem;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: #fff;
-    border: none;
-    border-radius: 3rem;
-    transition: .4s ease-in-out;
-    width: 100%;
-    margin: 0 0 2rem 0;
-    @media (min-width: $tablet) {
-        margin: 0;
-        width: 25rem;
-    }
-    &:hover {
-        background: lighten(#3B3B98, 10%);
-    }
-    &:focus {
-        background: darken(#3B3B98, 10%);
-    }
-}
-
-.btn--add {
-    margin: 0;
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    width: unset;
-    @media (min-width: $tablet-landscape) {
-        right: 1rem;
-    }
 }

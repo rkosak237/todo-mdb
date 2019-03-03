@@ -1,0 +1,41 @@
+/*
+    Place for variables:
+        - colors
+        - font-sizes
+        - margins
+        - etc.
+*/
+
+//Main theme
+// bg-color: #fff,
+$th-h1-color: #000;
+$th-font-color: #2C3A47;
+$th-input-color: #898686;
+$th-blue-accent: #0076FF;
+$th-light-font: lighten(#2C3A47, 20%);
+$th-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.20);
+//btn colors
+$btn-focus-font: #fff;
+$btn-focus-bg: darken(#3B3B98, 10%);
+$btn-background: #3B3B98;
+$btn-text: #fff;
+$btn-hover-background : lighten(#3B3B98, 10%);
+$btn-hover-text: #fff;
+$btn-disabled: #635e5e;
+
+
+// font-sizes
+$font-s-size: 1.5rem;
+$font-m-size: 2rem;
+$font-l-size: 5rem;
+//Spacing - sizes
+$s-size: 1.2rem;
+$m-size: 2rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+$xxl-size: 9.6rem;
+//Device-size
+$d-s-size: 30rem;
+$d-m-size: 40rem;
+$d-l-size: 80rem;
+$d-xl-size: 90rem;

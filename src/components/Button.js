@@ -3,7 +3,8 @@ import * as React from "react";
 const initialData = {
     btnClass: 'btn',
     text: 'Pass text to props',
-    type: 'button'
+    type: 'button',
+    disabled: false,
 }
 
 export default ({
@@ -11,13 +12,15 @@ export default ({
     text = initialData.text,
     type = initialData.type,
     event,
-    form
+    form,
+    disabled = initialData.disabled
 }) => (
         <button
-        type={type}
-        onClick={event}
-        className={styling}
-        form={form}>
+            type={type}
+            onClick={event}
+            className={styling}
+            form={form}
+            disabled={disabled}>
             {text}
         </button>
     );

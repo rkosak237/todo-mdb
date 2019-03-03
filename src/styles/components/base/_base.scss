@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $font-s-size;
+    color: $th-font-color;
+}
+html,
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
