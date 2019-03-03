@@ -13,6 +13,7 @@ export default ({
     type = initialData.type,
     event,
     form,
+    aria,
     disabled = initialData.disabled
 }) => (
         <button
@@ -20,7 +21,8 @@ export default ({
             onClick={event}
             className={styling}
             form={form}
-            disabled={disabled}>
+            disabled={disabled}
+            aria-label={aria}>
             {text}
         </button>
     );

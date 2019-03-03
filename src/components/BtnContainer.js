@@ -6,17 +6,19 @@ export default ({
     clearList,
     disableBtns
 }) => (
-    <section className="btn-container">
+    <div className="btn-container">
         <Button
             text={'- Remove last task'}
             event={removeLastTask}
             disabled={disableBtns}
+            aria={'Remove tasks'}
         />
 
         <Button
             text={'Clear all'}
             event={clearList}
             disabled={disableBtns}
+            aria={'Clear all tasks'}
         />
-    </section>
+    </div>
 );

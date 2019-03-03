@@ -6,7 +6,10 @@ export default ({
     tasks,
     event
 }) => (
-    <ul className="todo-app__list">
+    <ul
+    className="todo-app__list"
+    group="role"
+    aria-labelledby="groupLabel">
         {
         tasks.map((item, index) =>
             <SingleTask

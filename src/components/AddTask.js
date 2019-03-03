@@ -42,6 +42,7 @@ export default class AddTask extends Component {
                     placeholder="whats your next task?"
                     onChange={this.handleChange}
                     value={this.state.content}
+                    aria-label="Input for adding task"
                     minLength={3} />
             </form>
         );

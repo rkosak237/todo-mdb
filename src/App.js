@@ -61,32 +61,28 @@ export default class App extends Component {
     return (
       <div className="todo-app">
         <article className="todo-app__container">
-          <h1 className="todo-app__title">Hey, Good Evening!</h1>
+          <h1
+          className="todo-app__title"
+          aria-label="App title">Hey, Good Evening!</h1>
             <TextMessage
             message={tasks}/>
-          <section>
             <AddTask
               addTask={this.addTask}
-              listOfTasks={tasks.length}
-            />
+              listOfTasks={tasks.length}/>
             <BtnContainer
               removeLastTask={this.removeLast}
               clearList={this.clearList}
-              disableBtns={tasks.length === 0 ? true : false}
-            />
-          </section>
+              disableBtns={tasks.length === 0 ? true : false}/>
+            <List
+              tasks={tasks}
+              event={this.removeTask}/>
 
-          <List
-            tasks={tasks}
-            event={this.removeTask}
-          />
-
-          <Button
-            styling={"btn btn--add"}
-            form={'todo__form'}
-            text={'+ Add task'}
-            type={'submit'}
-          />
+            <Button
+              styling={"btn btn--add"}
+              form={'todo__form'}
+              text={'+ Add task'}
+              type={'submit'}
+              aria={'Add task'}/>
         </article>
       </div>
     );
