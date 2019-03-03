@@ -26,10 +26,12 @@
         font-weight: bold;
     }
     &__list {
-        display: flex;
-        flex-wrap: wrap;
         list-style: none;
         padding: 0;
+
+        &-container {
+            width: 100%;
+        }
     }
     &__list-element {
         display: flex;
