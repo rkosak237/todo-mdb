@@ -1,0 +1,44 @@
+.todo-app {
+    display: flex;
+    justify-content: center;
+    margin: $m-size $s-size;
+    @media (min-width: $tablet-landscape) {
+        margin: $l-size $s-size;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @media (min-width: $tablet) and (max-width: $desktop-medium) {
+            width: 70%;
+        }
+        @media (min-width: $desktop-medium) {
+            width: $d-l-size;
+        }
+    }
+    &__title {
+        font-size: $font-l-size;
+        margin: 0;
+    }
+    &__text {
+        font-size: $font-m-size;
+        color: $th-light-font;
+        font-weight: bold;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+    }
+    &__list-element {
+        display: flex;
+        justify-content: space-between;
+        border-radius: $s-size;
+        box-shadow: $th-shadow;
+        padding: $s-size;
+        margin: $s-size;
+        width: 100%;
+        animation: task-smooth-fade-in .5s ease-in-out 0s 1;
+    }
+}

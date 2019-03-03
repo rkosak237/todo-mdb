@@ -20,6 +20,10 @@
     &:focus {
         background: $btn-focus-bg;
     }
+    &:disabled {
+        background: lighten($btn-disabled, 20%);
+        color: $btn-text;
+    }
 }
 
 .btn--add {
@@ -31,4 +35,10 @@
     @media (min-width: $tablet-landscape) {
         right: 1rem;
     }
+}
+
+//close task
+.list__element-close {
+    cursor: pointer;
+    align-self: flex-start;
 }

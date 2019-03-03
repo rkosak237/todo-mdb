@@ -33,15 +33,16 @@ export default class AddTask extends Component {
         return (
             <form
                 id="todo__form"
-                className="todo-app__form"
+                className="add-task__form"
                 onSubmit={this.handleSubmit}>
                 <input
-                    className="todo-app__input"
+                    className="add-task__input"
                     type="text"
                     name="task"
                     placeholder="whats your next task?"
                     onChange={this.handleChange}
-                    value={this.state.content} />
+                    value={this.state.content}
+                    minLength={3} />
             </form>
         );
     }

@@ -1,0 +1,12 @@
+.add-task {
+    &__form {
+        margin: 0 0 2rem 0;
+    }
+    &__input {
+        border: 1.5px solid $th-input-color;
+        border-radius: 3rem;
+        padding: $s-size;
+        height: $xl-size;
+        width: 100%;
+    }
+}

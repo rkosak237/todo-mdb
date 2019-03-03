@@ -1,75 +1,10 @@
-@import './components//base//media-queries';
-@import './components//base/settings';
+@import './components/base/media-queries';
+@import './components/base/settings';
 @import './components/base/base';
+@import './components/base/animations';
 
+//components
+@import './components/todo-app';
 @import './components/btn';
-
-.todo-app {
-    display: flex;
-    justify-content: center;
-    margin: $m-size $s-size;
-    @media (min-width: $tablet-landscape) {
-        margin: $l-size $s-size;
-    }
-    &__container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        @media (min-width: $tablet) and (max-width: $desktop-medium) {
-            width: 70%;
-        }
-        @media (min-width: $desktop-medium) {
-            width: $d-l-size;
-        }
-    }
-    &__title {
-        font-size: $font-l-size;
-        margin: 0;
-    }
-    &__text {
-        font-size: $font-m-size;
-        color: $th-light-font;
-        font-weight: bold;
-    }
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 0;
-    }
-    &__list-element {
-        display: flex;
-        justify-content: space-between;
-        border-radius: $s-size;
-        box-shadow: $th-shadow;
-        padding: $s-size;
-        margin: $s-size;
-        width: 100%;
-    }
-    &__btn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 0 $s-size 0;
-        @media (min-width: $tablet) {
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin: 0;
-        }
-    }
-    &__form {
-        margin: 0 0 2rem 0;
-    }
-    &__input {
-        border: 1.5px solid $th-input-color;
-        border-radius: 3rem;
-        padding: $s-size;
-        height: $xl-size;
-        width: 100%;
-    }
-}
-
-.list__element-close {
-    cursor: pointer;
-    align-self: flex-start;
-}
+@import './components/add-task';
+@import './components/btn-container';

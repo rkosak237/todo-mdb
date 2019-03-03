@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import AddTask from './components/AddTask';
 import './styles/styles.scss';
+import uuid4 from 'uuid/v4';
+//components
+import TextMessage from './components/TextMessage';
+import AddTask from './components/AddTask';
+import BtnContainer from './components/BtnContainer';
 import List from './components/List';
 import Button from './components/Button';
-import TextMessage from './components/TextMessage';
-import uuid4 from 'uuid/v4';
 
 export default class App extends Component {
   constructor(props) {
@@ -40,6 +42,7 @@ export default class App extends Component {
   removeTask = (taskToRemove) => {
     this.setState((prevState) => ({
       tasks: prevState.tasks.filter(task => {
+
         return taskToRemove !== task;
       })
     }))
@@ -66,17 +69,11 @@ export default class App extends Component {
               addTask={this.addTask}
               listOfTasks={tasks.length}
             />
-            <div className="todo-app__btn-container">
-              <Button
-                text={'- Remove last task'}
-                event={this.removeLast}
-                />
-
-              <Button
-                text={'Clear all'}
-                event={this.clearList}
-                />
-            </div>
+            <BtnContainer
+              removeLastTask={this.removeLast}
+              clearList={this.clearList}
+              disableBtns={tasks.length === 0 ? true : false}
+            />
           </section>
 
           <List
