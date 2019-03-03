@@ -1,13 +1,13 @@
 {
-  "main.css": "/todo-mdb/static/css/main.8c367191.chunk.css",
-  "main.js": "/todo-mdb/static/js/main.871966f6.chunk.js",
-  "main.js.map": "/todo-mdb/static/js/main.871966f6.chunk.js.map",
+  "main.css": "/todo-mdb/static/css/main.0f23cd27.chunk.css",
+  "main.js": "/todo-mdb/static/js/main.ef30c905.chunk.js",
+  "main.js.map": "/todo-mdb/static/js/main.ef30c905.chunk.js.map",
   "runtime~main.js": "/todo-mdb/static/js/runtime~main.7204ca92.js",
   "runtime~main.js.map": "/todo-mdb/static/js/runtime~main.7204ca92.js.map",
-  "static/js/2.93fb9c3d.chunk.js": "/todo-mdb/static/js/2.93fb9c3d.chunk.js",
-  "static/js/2.93fb9c3d.chunk.js.map": "/todo-mdb/static/js/2.93fb9c3d.chunk.js.map",
+  "static/js/2.11c46976.chunk.js": "/todo-mdb/static/js/2.11c46976.chunk.js",
+  "static/js/2.11c46976.chunk.js.map": "/todo-mdb/static/js/2.11c46976.chunk.js.map",
   "index.html": "/todo-mdb/index.html",
-  "precache-manifest.64e50f14e6dd730db090e384e0155393.js": "/todo-mdb/precache-manifest.64e50f14e6dd730db090e384e0155393.js",
+  "precache-manifest.12b5e59798d0095544c137e16abf27a1.js": "/todo-mdb/precache-manifest.12b5e59798d0095544c137e16abf27a1.js",
   "service-worker.js": "/todo-mdb/service-worker.js",
-  "static/css/main.8c367191.chunk.css.map": "/todo-mdb/static/css/main.8c367191.chunk.css.map"
+  "static/css/main.0f23cd27.chunk.css.map": "/todo-mdb/static/css/main.0f23cd27.chunk.css.map"
 }
