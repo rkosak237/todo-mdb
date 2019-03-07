@@ -1,3 +1,19 @@
+# Todo-list
+This project was an exercise for recruitment process.
+It was created with:
+* React
+* Sass
+* React-transitions
+* Mobile-first approach
+
+## Functionalities
+* Adding/removing task
+* Clearing list
+* Removing last task from the list
+* Appearing/disappearing with animation
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
